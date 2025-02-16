@@ -64,7 +64,7 @@ const Hero = () => {
             e.preventDefault();
             const link = document.createElement('a');
             link.href = './assets/Mahesh_S_Resume.pdf';
-            link.setAttribute('download', 'resume.pdf');
+            link.setAttribute('download', 'Mahesh_S_Resume.pdf');
             link.style.display = 'none';
             document.body.appendChild(link);
             link.click();
