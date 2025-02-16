@@ -56,24 +56,26 @@ const Hero = () => {
       </div>
 
       <div className="absolute bottom-7 left-0 right-0 w-full z-10 c-space">
-        
-        <a
-          href="./assets/resume.pdf"
-          className="w-fit"
-          onClick={(e) => {
-            e.preventDefault();
-            const link = document.createElement('a');
-            link.href = './assets/Mahesh_S_Resume.pdf';
-            link.setAttribute('download', 'Mahesh_S_Resume.pdf');
-            link.style.display = 'none';
-            document.body.appendChild(link);
-            link.click();
-            document.body.removeChild(link);
-          }}
-        >
-          <Button name="Get the Resume" isBeam containerClass="sm:w-fit w-full sm:min-w-96" />
-        </a>
-      </div>
+  <a
+    href="./assets/Mahesh-S_Resume.pdf"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="w-fit"
+    onClick={(e) => {
+      // Trigger the download
+      const link = document.createElement('a');
+      link.href = './assets/Mahesh-S_Resume.pdf';
+      link.setAttribute('download', 'Mahesh-S_Resume.pdf');
+      link.style.display = 'none';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }}
+  >
+    <Button name="View | Download Resume" isBeam containerClass="sm:w-fit w-full sm:min-w-96" />
+  </a>
+</div>
+
     </section>
   );
 };
